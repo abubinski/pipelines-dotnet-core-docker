@@ -51,8 +51,7 @@ stages:
 
     - task: HelmDeploy@0
       inputs:
-        connectionType: 'Kubernetes Service Connection'
         command: 'package'
-        chartPath: 'javascript/'
+        chartPath: './javascript'
         chartVersion: 'v1'
         updateDependency: true
