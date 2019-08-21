@@ -1,4 +1,13 @@
 # Docker
+- task: HelmDeploy@0
+  inputs:
+    connectionType: 'Azure Resource Manager'
+    azureSubscription: 'anbubin_InternalSubscription(eee41ffc-af8f-428f-b950-5e0f768c4229)'
+    azureResourceGroup: 'resourceGroup'
+    kubernetesCluster: 'myAKSCluster'
+    namespace: 'Helm Chart Package and Deployment'
+    command: 'init'
+    arguments: '--client-only'
 # Build and push an image to Azure Container Registry
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
